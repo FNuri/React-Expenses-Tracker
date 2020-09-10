@@ -1,9 +1,14 @@
 import React from 'react'
+import Item from './ExpenseItem'
 
-export const ExpenseList = () => {
+const ExpenseList = () => {
   return (
     <div>
       Hello from Expense List
+      <Item/>
     </div>
   )
 }
+
+
+export default ExpenseList
