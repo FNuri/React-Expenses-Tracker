@@ -4,9 +4,9 @@ const ExpenseItem = ({expense}) => {
   const {id, charge,amount} = expense
 
   return (
-    <li>
+    <li className="item">
       <div className="info">
-        
+  <span className="expense">{charge}</span>
       </div>
     </li>
   )
