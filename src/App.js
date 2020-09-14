@@ -53,7 +53,7 @@ function App() {
     setAlert({show:true, type, text})
     setTimeout(() => {
       setAlert({show:false})
-    }, 3000)
+    }, 5000)
   }
 
    // handle submit
@@ -62,10 +62,13 @@ function App() {
     if(charge !== '' && amount > 0) {
         const singleExpense = {id: uuid (), charge, amount}
         setExpenses([...expenses, singleExpense])
+        handleAlert({type:'success', text:'item added'})
         setCharge('')
         setAmount('')
+
     } else {
       // handle alert called
+      handleAlert({type:'danger', text: `expense can't be an empty value and amount value has to be larger than zero`})
     }
   }
   
