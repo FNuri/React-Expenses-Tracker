@@ -4,6 +4,21 @@ const ExpenseForm = ({charge, amount, handleCharge, handleAmount, handleSubmit})
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-center">
+      
+        <div className="form-group">
+          <label htmlFor="charge">Expense</label>
+          <input 
+          type="text" 
+          className="form-control" 
+          id="charge" name="charge" 
+          placeholder="e.g rent"
+          value={charge}
+          onChange={handleCharge}
+
+          
+          />
+        </div>
+
         <div className="form-group">
           <label htmlFor="amount">Amount</label>
           <input 
@@ -14,19 +29,6 @@ const ExpenseForm = ({charge, amount, handleCharge, handleAmount, handleSubmit})
           placeholder="e.g 100"
           value={amount}
           onChange={handleAmount}
-          
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="charge">Charge</label>
-          <input 
-          type="text" 
-          className="form-control" 
-          id="charge" name="charge" 
-          placeholder="e.g rent"
-          value={charge}
-          onChange={handleCharge}
-
           
           />
         </div>
