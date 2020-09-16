@@ -95,7 +95,9 @@ function App() {
 
    // handle edit
    const handleEdit = (id) => {
-    console.log(`item edited : ${id}`)
+ let expense = expenses.find(item => item.id === id)
+
+    console.log(expense)
   }
 
   return (
