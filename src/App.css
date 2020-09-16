@@ -3,9 +3,11 @@
   --primaryColor: #f15025;
   --mainWhite: #fff;
   --mainBlack: #222;
+  --mainBlue: #162644;
   --mainGrey: #9e9e9e;
   --mainRed: #d50000;
   --mainGreen: #4caf50;
+  
 }
 * {
   margin: 0;
@@ -19,9 +21,10 @@ body {
 h1 {
   text-align: center;
   text-transform: capitalize;
-  margin: 2rem 0;
-  color: var(--mainWhite);
+  margin: 1rem 0;
+  color: var(--mainBlue);
   letter-spacing: 5px;
+  font-size: 40px;
 }
 .App {
   margin: 0 auto;
@@ -30,6 +33,7 @@ h1 {
   background: var(--mainWhite);
   padding-bottom: 2rem;
   border-radius: 2px;
+  
 }
 .form-center {
   display: flex;

@@ -131,7 +131,7 @@ useEffect(() => {
   <>
   {alert.show && <Alert type={alert.type} text={alert.text}/> }
   <Alert/>
-  <h1>Budget Calculator</h1>
+  <h1>Expenses Tracker</h1>
   <main className="App">
   <ExpenseForm 
   charge={charge} 
