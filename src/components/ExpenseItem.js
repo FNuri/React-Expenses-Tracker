@@ -1,7 +1,7 @@
 import React from 'react'
 import {MdEdit, MdDelete} from 'react-icons/md'
 
-const ExpenseItem = ({expense}) => {
+const ExpenseItem = ({expense, handleEdit, handleDelete}) => {
   const {id, charge,amount} = expense
 
   return (
@@ -11,10 +11,10 @@ const ExpenseItem = ({expense}) => {
   <span className="amount">£{amount}</span>
       </div>
       <div>
-        <button className="edit-btn" aria-label="edit button">
+        <button className="edit-btn" aria-label="edit button" onClick={() => handleEdit(id)}>
         <MdEdit/>
         </button>
-        <button className="clear-btn" aria-label="delete button">
+        <button className="clear-btn" aria-label="delete button" onClick={() => handleDelete(id)}>
         <MdDelete/>
         </button>
       </div>

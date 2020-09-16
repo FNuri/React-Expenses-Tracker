@@ -67,11 +67,27 @@ function App() {
         setAmount('')
 
     } else {
+
       // handle alert called
       handleAlert({type:'danger', text: `expense can't be an empty value and amount value has to be larger than zero`})
     }
   }
   
+  // clear all items
+  const clearItems = () => {
+    setExpenses([])
+  }
+
+  // handle delete
+  const handleDelete = (id) => {
+    console.log(`item deleted : ${id}`)
+  }
+
+   // handle edit
+   const handleEdit = (id) => {
+    console.log(`item edited : ${id}`)
+  }
+
   return (
     
   <>
@@ -86,7 +102,12 @@ function App() {
   handleCharge={handleCharge} 
   handleSubmit={handleSubmit}
   />
-  <ExpenseList expenses={expenses}/>
+  <ExpenseList 
+  expenses={expenses} 
+  handleDelete={handleDelete} 
+  handleEdit={handleEdit} 
+  clearItems={clearItems}
+  />
   </main>
   <h1>
     total spending: <span className="total">
